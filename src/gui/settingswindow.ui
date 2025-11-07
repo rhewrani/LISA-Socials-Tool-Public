@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settingswindow</class>
+ <widget class="QDialog" name="Settingswindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>630</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>630</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-color: #111111;
+	color: white;
+}
+
+QLabel {
+	color: white;
+}
+
+QPushButton {
+    background-color: #25292e;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #2f3338;
+}
+
+QPushButton:pressed {
+    background-color: #1c1f23;
+}
+
+QTextEdit, QLineEdit {
+	background-color: #363636;
+	color: #a8a8a8;
+	border: 1px solid #7a7a7a;
+}
+
+QComboBox {
+	background-color: #25292e;
+	color: white;
+	border-radius: 5px;
+	Padding: 5px;
+}
+
+QCheckBox {
+    color: white;
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #7a7a7a;
+    background-color: #25292e;
+    border-radius: 3px;
+}
+
+QCheckBox::indicator:hover {
+    border: 2px solid #a8a8a8;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #2f3338;
+    border: 2px solid #ede44e;
+    image: url(:/images/checkmark_white.png);
+}
+
+QCheckBox::indicator:checked:hover {
+    border: 2px solid #7bb5e8;
+}
+
+QMessageBox {
+    background-color: #111111;
+    color: white;
+    border: 1px solid #444;
+    min-width: 300px;
+    min-height: 100px;
+}
+
+QMessageBox QLabel {
+    color: white;
+    padding: 8px;
+}
+
+QMessageBox QPushButton {
+    background-color: #25292e;
+    color: white;
+    border-radius: 5px;
+    padding: 6px 12px;
+    min-width: 70px;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #2f3338;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #1c1f23;
+}</string>
+  </property>
+  <widget class="QWidget" name="settingswidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>320</y>
+      <width>780</width>
+      <height>3</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Line {
+	background-color: #363636;
+	color: #363636;
+}</string>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_SAVE">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>270</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Save settings</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="LN_TGEN_PRVW2">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>470</y>
+      <width>371</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Preview</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="LN_TGEN_PRVW">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>340</y>
+      <width>371</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Preview</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="LN_TGEN_INP2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>470</y>
+      <width>371</width>
+      <height>110</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Text preset</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="LN_TGEN_INP">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>371</width>
+      <height>110</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Text preset</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LN_TDF">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_RESET">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>270</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Reset settings</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_TDF_OPEN">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>190</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CKBX_OFE">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>90</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Open file explorer on save</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CKBX_DQ">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>130</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Enable Discord quoting</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CKBX_EAC">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>170</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Enable automatic copying</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_TDF">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Target downloads folder:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_VER">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>20</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Version:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="CMBX_LANG">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>90</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>English (US)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Deutsch (DE)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dansk (DA)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nederlands (NL)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Français (FR)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Español (ES)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Português (PT)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Italiano (IT)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>中文 (ZH)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>日本語 (JP)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>한국어 (KR)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ไทย (TH)</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="LBL_TTL">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>30</y>
+      <width>261</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Settings</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_LANG">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>90</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Language:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LN_SSID">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Instagram session ID</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_SSID">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Session ID:</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,1850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>830</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1400</width>
+    <height>830</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1400</width>
+    <height>830</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>LISA Socials Tool</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/resources.qrc">
+    <normaloff>:/images/lisa.jpg</normaloff>:/images/lisa.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #111111;
+    color: white;
+}
+
+QLabel {
+    color: white;
+}
+
+QPushButton {
+    background-color: #25292e;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #2f3338;
+}
+
+QPushButton:pressed {
+    background-color: #1c1f23;
+}
+
+QTextEdit, QLineEdit {
+    background-color: #363636;
+    color: #a8a8a8;
+    border: 1px solid #7a7a7a;
+    padding: 4px;
+}
+
+QComboBox {
+    background-color: #25292e;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QMenuBar {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 4px;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: #2f3338;
+}
+
+QMenuBar::item:pressed {
+    background-color: #1c1f23;
+}
+
+QMenu {
+    background-color: #25292e;
+    color: white;
+    border: 1px solid #444;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 6px 20px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #2f3338;
+}
+
+QMenu::item:pressed {
+    background-color: #1c1f23;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #444;
+    margin: 4px 0;
+}
+
+QCheckBox {
+    color: white;
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #7a7a7a;
+    background-color: #25292e;
+    border-radius: 3px;
+}
+
+QCheckBox::indicator:hover {
+    border: 2px solid #a8a8a8;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #2f3338;
+    border: 2px solid #5a9dd4;
+    image: url(:/images/checkmark_white.png);
+}
+
+QCheckBox::indicator:checked:hover {
+    border: 2px solid #7bb5e8;
+}
+
+QMessageBox {
+    background-color: #111111;
+    color: white;
+    border: 1px solid #444;
+    min-width: 300px;
+    min-height: 100px;
+}
+
+QMessageBox QLabel {
+    color: white;
+    padding: 8px;
+}
+
+QMessageBox QPushButton {
+    background-color: #25292e;
+    color: white;
+    border-radius: 5px;
+    min-width: 70px;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #2f3338;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #1c1f23;
+}
+
+QListView QScrollBar:vertical {
+    background: #1a1a1a;
+    width: 12px;
+    margin: 0px;
+    border-radius: 6px;
+}
+
+QListView QScrollBar::handle:vertical {
+    background: #363636;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QListView QScrollBar::handle:vertical:hover {
+    background: #4a4a4a;
+}
+
+QListView QScrollBar::handle:vertical:pressed {
+    background: #2a2a2a;
+}
+
+QListView QScrollBar::add-line:vertical,
+QListView QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QListView QScrollBar::add-page:vertical,
+QListView QScrollBar::sub-page:vertical {
+    background: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="INST_LN_RES">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>530</y>
+      <width>701</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_MGC">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>690</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Do magic</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../resources/resources.qrc">
+      <normaloff>:/emojis/star.png</normaloff>:/emojis/star.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QWidget" name="INST_WDGT_FEED" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>330</y>
+      <width>561</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+	background-color: #0c0c0c;
+}</string>
+    </property>
+    <widget class="QListView" name="INST_LV_FEED">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>541</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Plain</enum>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+     </property>
+     <property name="tabKeyNavigation">
+      <bool>false</bool>
+     </property>
+     <property name="dragEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+     </property>
+     <property name="verticalScrollMode">
+      <enum>QAbstractItemView::ScrollMode::ScrollPerPixel</enum>
+     </property>
+     <property name="flow">
+      <enum>QListView::Flow::LeftToRight</enum>
+     </property>
+     <property name="resizeMode">
+      <enum>QListView::ResizeMode::Fixed</enum>
+     </property>
+     <property name="viewMode">
+      <enum>QListView::ViewMode::IconMode</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="INST_LBL_OR">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>620</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>OR</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="INST_LN_LINK">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>670</y>
+      <width>501</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Link</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_SAVE">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>690</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Download selected images</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="INST_LBL_TTL">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>10</y>
+      <width>311</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>20</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>LISA Socials Tool</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="INST_CMBX_USER">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>LISA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>LLOUD</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>LFAMILY</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QStackedWidget" name="INST_WDGT_USER">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>561</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LayoutDirection::RightToLeft</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+	background-color: #0c0c0c;
+}
+
+QPushButton {
+	background-color: #25292e;
+	color: white;
+	border-radius: 5px;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="INST_PG_LISA">
+     <widget class="QLabel" name="INST_LISA_PFP">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>150</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 75px;
+border: 2px solid #0c0c0c;
+background-color: lightgray; 
+background-position: center;
+background-repeat: no-repeat;
+background-image: url(:/images/lisa.jpg);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LISA_POST_CON">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>40</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>10000</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LISA_POST">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #a8a8a8</string>
+      </property>
+      <property name="text">
+       <string>Posts</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LISA_FOL_CON">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>107,8M</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LISA_FOL">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>40</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #a8a8a8</string>
+      </property>
+      <property name="text">
+       <string>Followers</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LISA_NAME">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>70</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>LISA</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LISA_USER">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>331</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>lalalalisa_m</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LISA_BIO">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>90</y>
+        <width>351</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <fontweight>DemiBold</fontweight>
+       </font>
+      </property>
+      <property name="text">
+       <string>ALTER EGO</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>10</y>
+        <width>25</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../resources/resources.qrc">:/images/verified.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="INST_LISA_STRY">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Story</string>
+      </property>
+     </widget>
+     <zorder>INST_LISA_FOL</zorder>
+     <zorder>INST_LISA_PFP</zorder>
+     <zorder>INST_LISA_POST_CON</zorder>
+     <zorder>INST_LISA_POST</zorder>
+     <zorder>INST_LISA_NAME</zorder>
+     <zorder>INST_LISA_USER</zorder>
+     <zorder>INST_LISA_BIO</zorder>
+     <zorder>INST_LISA_FOL_CON</zorder>
+     <zorder>label</zorder>
+     <zorder>INST_LISA_STRY</zorder>
+    </widget>
+    <widget class="QWidget" name="INST_PG_LOUD">
+     <widget class="QLabel" name="INST_LOUD_FOL">
+      <property name="geometry">
+       <rect>
+        <x>355</x>
+        <y>40</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #a8a8a8</string>
+      </property>
+      <property name="text">
+       <string>Followers</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LOUD_PFP">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>150</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 75px;
+border: 2px solid #0c0c0c;
+background-color: lightgray; 
+background-position: center;
+background-repeat: no-repeat;
+background-image: url(:/images/lisa.jpg);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LOUD_FOL_CON">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>40</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>107M</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LOUD_POST">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #a8a8a8</string>
+      </property>
+      <property name="text">
+       <string>Posts</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LOUD_POST_CON">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>40</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>10000</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LOUD_BIO">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>90</y>
+        <width>241</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <fontweight>DemiBold</fontweight>
+       </font>
+      </property>
+      <property name="text">
+       <string>LLOUD
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LOUD_USER">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>221</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>lalalalisa_m</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LOUD_NAME">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>70</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>LISA</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>10</y>
+        <width>25</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../resources/resources.qrc">:/images/verified.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="INST_LOUD_STRY">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Story</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="INST_PG_LFAM">
+     <widget class="QLabel" name="INST_LFAM_POST_CON">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>40</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>10000</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LFAM_PFP">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>150</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 75px;
+border: 2px solid #0c0c0c;
+background-color: lightgray; 
+background-position: center;
+background-repeat: no-repeat;
+background-image: url(:/images/lisa.jpg);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LFAM_FOL_CON">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>40</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>107M</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LFAM_POST">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #a8a8a8</string>
+      </property>
+      <property name="text">
+       <string>Posts</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LFAM_FOL">
+      <property name="geometry">
+       <rect>
+        <x>355</x>
+        <y>40</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #a8a8a8</string>
+      </property>
+      <property name="text">
+       <string>Followers</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LFAM_BIO">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>90</y>
+        <width>241</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <fontweight>DemiBold</fontweight>
+       </font>
+      </property>
+      <property name="text">
+       <string>LEO - 2018.2.9
+LUCA - 2018.6.5
+LILY - 2019.6.14
+LOUIS - 2019.8.1
+LEGO - 2020.11.21
+LOVE - 2021.4.5</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LFAM_USER">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>221</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>lalalalisa_m</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="INST_LFAM_NAME">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>70</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>LISA</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>10</y>
+        <width>25</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../resources/resources.qrc">:/images/verified.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="INST_LFAM_STRY">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Story</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="INST_BTN_NP">
+    <property name="geometry">
+     <rect>
+      <x>559</x>
+      <y>620</y>
+      <width>41</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="INST_BTN_RFSH">
+    <property name="geometry">
+     <rect>
+      <x>559</x>
+      <y>50</y>
+      <width>41</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../resources/resources.qrc">
+      <normaloff>:/images/refresh_white.png</normaloff>:/images/refresh_white.png</iconset>
+    </property>
+   </widget>
+   <widget class="QWidget" name="WDGT_PRVW" native="true">
+    <property name="geometry">
+     <rect>
+      <x>679</x>
+      <y>30</y>
+      <width>701</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+	background-color: #0c0c0c;
+}</string>
+    </property>
+    <widget class="QStackedWidget" name="INST_WDGT_PRVW_PGS">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>681</width>
+       <height>461</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QStackedWidget {
+	background-color: #0c0c0c;
+}
+
+QPushButton {
+    background-color: #363636;
+    color: #a8a8a8;
+    border: none;
+    border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: #4a4a4a;
+    color: #ffffff;
+}
+QPushButton:pressed {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="INST_PG_MDCT">
+      <widget class="QListView" name="INST_LV_POST">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>571</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Plain</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+       </property>
+       <property name="tabKeyNavigation">
+        <bool>false</bool>
+       </property>
+       <property name="dragEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SelectionMode::MultiSelection</enum>
+       </property>
+       <property name="verticalScrollMode">
+        <enum>QAbstractItemView::ScrollMode::ScrollPerPixel</enum>
+       </property>
+       <property name="flow">
+        <enum>QListView::Flow::LeftToRight</enum>
+       </property>
+       <property name="resizeMode">
+        <enum>QListView::ResizeMode::Fixed</enum>
+       </property>
+       <property name="viewMode">
+        <enum>QListView::ViewMode::IconMode</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDCT_USER">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>380</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>lalalalisa_m</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDCT_VERI">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>380</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../resources/resources.qrc">:/images/verified.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDCT_TMSP">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>430</y>
+         <width>171</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	color: #a8a8a8;</string>
+       </property>
+       <property name="text">
+        <string>TIMESTAMP</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="INST_MDCT_CAPT">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>370</y>
+         <width>280</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>280</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>280</width>
+         <height>190</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+background: transparent;
+color: white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;CAPTION&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDCT_COM_PIC">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>180</y>
+         <width>16</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../resources/resources.qrc">:/images/message-circle_white.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDCT_LIKE_PIC">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>70</y>
+         <width>16</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../resources/resources.qrc">:/images/heart_white.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDCT_COM">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>205</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>COMMENTS</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDCT_LIKE">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>95</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>LIKES</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDCT_LOC">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>20</y>
+         <width>100</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>LOCATION</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="INST_BTN_SELC">
+       <property name="geometry">
+        <rect>
+         <x>599</x>
+         <y>400</y>
+         <width>81</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select all</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="INST_BTN_DSLC">
+       <property name="geometry">
+        <rect>
+         <x>599</x>
+         <y>430</y>
+         <width>81</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Deselect all</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDCT_NEW">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>430</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(16, 252, 0);</string>
+       </property>
+       <property name="text">
+        <string>NEW</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="INST_PG_MDIA">
+      <widget class="QLabel" name="INST_MDIA_IMG">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>341</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QWidget" name="INST_WDGT_VID" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>340</width>
+         <height>440</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="INST_BTN_PLBK">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>410</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources/resources.qrc">
+         <normaloff>:/images/pause_white.png</normaloff>:/images/pause_white.png</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_USER">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>50</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>lalalalisa_m</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_VERI">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>50</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../resources/resources.qrc">:/images/verified.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_LIKE_PIC">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>340</y>
+         <width>16</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../resources/resources.qrc">:/images/heart_white.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_COM_PIC">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>370</y>
+         <width>16</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../resources/resources.qrc">:/images/message-circle_white.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_LIKE">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>340</y>
+         <width>221</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>LIKES</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_COM">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>370</y>
+         <width>271</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>COMMENTS</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_ACPT">
+       <property name="geometry">
+        <rect>
+         <x>459</x>
+         <y>410</y>
+         <width>210</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>210</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	color: #a8a8a8;</string>
+       </property>
+       <property name="text">
+        <string>ACCESSABILITY_CAPTION</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_TMSP">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>10</y>
+         <width>191</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	color: #a8a8a8;</string>
+       </property>
+       <property name="text">
+        <string>TIMESTAMP</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_LOC">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>310</y>
+         <width>271</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>LOCATION</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_VIEW_ICON">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>340</y>
+         <width>23</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../resources/resources.qrc">:/images/eye_white.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_VIEW">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>340</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>VIEWS</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="INST_MDIA_CAPT">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>110</y>
+         <width>280</width>
+         <height>190</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>280</width>
+         <height>190</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>280</width>
+         <height>190</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: none;
+background: transparent;
+color: white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;CAPTION&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="INST_BTN_SOUN">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>410</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources/resources.qrc">
+         <normaloff>:/images/volume-on_white.png</normaloff>:/images/volume-on_white.png</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="INST_MDIA_NEW">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>10</y>
+         <width>49</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(16, 252, 0);</string>
+       </property>
+       <property name="text">
+        <string>NEW</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="INST_LBL_MDST">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>150</y>
+       <width>411</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #a8a8a8;</string>
+     </property>
+     <property name="text">
+      <string>No media selected</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <zorder>INST_LBL_MDST</zorder>
+    <zorder>INST_WDGT_PRVW_PGS</zorder>
+   </widget>
+   <widget class="QPushButton" name="INST_BTN_DOWN">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>670</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Download</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_LISA">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>700</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>13</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Hello Lisa</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1400</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="MENU_OPEN_SETT"/>
+    <addaction name="MENU_OPEN_INFO"/>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+  <action name="MENU_OPEN_SETT">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/images/settings_white.png</normaloff>:/images/settings_white.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open settings...</string>
+   </property>
+  </action>
+  <action name="MENU_OPEN_INFO">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/images/info_white.png</normaloff>:/images/info_white.png</iconset>
+   </property>
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,23 @@
+{
+    "app": {
+        "version": "1.0"
+    },
+    "data": {
+        "downloadDir": "",
+		"sessionid": "YOUR_SESSION_ID"
+    },
+    "features": {
+        "autoCopyText": true,
+        "enableDiscordQuoting": true,
+        "enableLogging": false,
+        "openFileExporerOnSave": true,
+		"isFirstOpen": true
+    },
+    "text_presets": {
+        "instagram_post": "{user} shared a post on Instagram!\n{caption}\n\n{link}",
+        "instagram_story": "{user} shared a story on Instagram!\n\n{link}"
+    },
+    "user": {
+        "language": 0
+    }
+}
