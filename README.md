@@ -116,6 +116,22 @@
 
 ---
 
+## 🔑 How to get your Session ID (Required for Stories)
+
+To download Stories or private content, the application requires an active Instagram Session ID. Here is how to find yours:
+
+1.  **Log in** to [Instagram.com](https://www.instagram.com) in your desktop web browser.
+2.  Press `F12` (or Right-click > **Inspect**) to open the Developer Tools.
+3.  Navigate to the **Application** tab (Chrome/Edge) or **Storage** tab (Firefox).
+4.  In the left sidebar, expand **Cookies** and select `https://www.instagram.com`.
+5.  Find the row named `sessionid` in the list.
+6.  Double-click the **Value** and copy the long string of text.
+7.  Paste this value into the **Settings** menu within **Instagram Socials Downloader**.
+
+> ⚠️ **Security Note:** Your Session ID is essentially a temporary password. The application stores this locally on your machine to authenticate requests to the Instagram API.
+
+---
+
 ## License
 
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
